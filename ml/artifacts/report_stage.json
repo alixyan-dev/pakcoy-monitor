@@ -11,15 +11,42 @@
     "pre_harvest",
     "vegetative"
   ],
+  "test_accuracy": 0.3704,
+  "test_f1_weighted": 0.2002,
+  "confusion_matrix": [
+    [
+      10,
+      0,
+      0,
+      0
+    ],
+    [
+      5,
+      0,
+      0,
+      0
+    ],
+    [
+      6,
+      0,
+      0,
+      0
+    ],
+    [
+      6,
+      0,
+      0,
+      0
+    ]
+  ],
   "n_samples": 174,
-  "distribution": {
-    "harvest_ready": 64,
-    "initial": 37,
-    "pre_harvest": 36,
-    "vegetative": 37
-  },
-  "status": "training_in_progress",
-  "note": "Artifact stage_cnn.keras akan dihasilkan oleh train_stage_cnn.py setelah selesai (proses aktif).",
-  "test_accuracy_estimated": null,
-  "test_f1_weighted_estimated": null
+  "train": 121,
+  "val": 26,
+  "test": 27,
+  "class_weights": {
+    "harvest_ready": 0.6875,
+    "initial": 1.1635,
+    "pre_harvest": 1.21,
+    "vegetative": 1.1635
+  }
 }

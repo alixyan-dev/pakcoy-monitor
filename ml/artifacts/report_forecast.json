@@ -1,0 +1,19 @@
+{
+  "model": "Multimodal_LSTM_forecast",
+  "input_shape": [
+    14,
+    9
+  ],
+  "output_shape": [
+    4,
+    3
+  ],
+  "split": "chronological_70_15_15",
+  "train": 254,
+  "val": 54,
+  "test": 55,
+  "mae": 0.0454,
+  "rmse": 0.1865,
+  "r2": 0.8463,
+  "note": "Visual branch (stage logits) digunakan dummy saat training; akan diganti dengan StageCNN logits saat inference."
+}
