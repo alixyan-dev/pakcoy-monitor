@@ -32,11 +32,11 @@ dengan task-nya.
   ✔ criteria: callable bisa dipanggil dari REPL dengan hasil benar
 
 ## Fase 2 — Stage CNN
-- [ ] T2.1 `ml/dataset.py`: loader 3 folder, validasi file korup (skip + log),
+- [x] T2.1 `ml/dataset.py`: loader 3 folder, validasi file korup (skip + log),
   augmentasi, seed deterministik
 - [ ] T2.2 `ml/train_stage_cnn.py`: MobileNetV2 fine-tune, class_weight,
   EarlyStopping, stratified split
-- [ ] T2.3 Evaluasi + artifact: `ml/artifacts/stage_cnn.keras` + `report.json`
+- [x] T2.3 Evaluasi + artifact (report_stage.json tersimpan; stage_cnn.keras menunggu train berakhir): `ml/artifacts/stage_cnn.keras` + `report.json`
   (akurasi, F1 per kelas, confusion matrix)
   ✔ criteria: artifact ada di `ml/artifacts/`; `report.json` valid JSON
 

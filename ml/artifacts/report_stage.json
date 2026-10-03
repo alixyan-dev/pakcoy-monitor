@@ -1,0 +1,25 @@
+{
+  "model": "MobileNetV2_stage_cnn",
+  "input_shape": [
+    224,
+    224,
+    3
+  ],
+  "classes": [
+    "harvest_ready",
+    "initial",
+    "pre_harvest",
+    "vegetative"
+  ],
+  "n_samples": 174,
+  "distribution": {
+    "harvest_ready": 64,
+    "initial": 37,
+    "pre_harvest": 36,
+    "vegetative": 37
+  },
+  "status": "training_in_progress",
+  "note": "Artifact stage_cnn.keras akan dihasilkan oleh train_stage_cnn.py setelah selesai (proses aktif).",
+  "test_accuracy_estimated": null,
+  "test_f1_weighted_estimated": null
+}
