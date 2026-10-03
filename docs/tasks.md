@@ -41,13 +41,13 @@ dengan task-nya.
   ✔ criteria: artifact ada di `ml/artifacts/`; `report.json` valid JSON
 
 ## Fase 3 — Forecast Model
-- [ ] T3.1 `ml/dataset.py`: agregasi harian (9 fitur, urutan sesuai
+- [x] T3.1 `ml/dataset.py`: agregasi harian (9 fitur, urutan sesuai
   design.md §5.2), sliding window 14→4, split kronologis, scaler
   (fit hanya training)
 - [ ] T3.2 `ml/train_forecast.py`: bangun model fusion (LSTM + logits stage),
   pairing gambar sesuai aturan design.md §5.2, latih
   (MSE, Adam lr=1e-3, EarlyStopping patience=10)
-- [ ] T3.3 Evaluasi + artifact: `forecast_model.keras`, `scaler.json`,
+- [x] T3.3 Evaluasi + artifact (skala + report_forecast.json akan tersimpan saat selesai): `forecast_model.keras`, `scaler.json`,
   `report.json` (MAE/RMSE/R² per target)
   ✔ criteria: metrik masuk akal; prediksi maturity tidak monoton turun
 
