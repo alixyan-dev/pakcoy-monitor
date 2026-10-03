@@ -26,3 +26,6 @@ out/
 Thumbs.db
 .vscode/
 .idea/
+*.sqlite3
+*.sqlite
+pakcoy.db

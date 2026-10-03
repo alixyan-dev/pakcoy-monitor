@@ -1,7 +1,8 @@
 import os, numpy as np
-from app.main import MODELS
+from app.main import load_models, MODELS
 
 def predict_forecast(image_path=None):
+    load_models()  # lazy load saat pertama dipanggil
     # 1. Ambil 14 hari terakhir (dari DB; untuk v1 pakai data fixed)
     # 2. Preprocess -> scale
     # 3. StageCNN -> logits (jika image_path diberikan, else default)

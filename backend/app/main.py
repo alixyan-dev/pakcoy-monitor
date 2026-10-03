@@ -4,7 +4,6 @@ import os
 
 app = FastAPI(title="Pakcoy Monitor API", version="0.1.0")
 
-# CORS
 app.add_middleware(
     CORSMiddleware,
     allow_origins=os.environ.get("CORS_ORIGINS", "http://localhost:3000").split(","),
@@ -13,10 +12,13 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Load artifacts saat startup (lazy — hanya jika file ada)
 MODELS = {}
+_model_loaded = False
 
 def load_models():
+    global _model_loaded
+    if _model_loaded:
+        return
     try:
         import tensorflow as tf
         if os.path.exists("ml/artifacts/stage_cnn.keras"):
@@ -25,20 +27,18 @@ def load_models():
         if os.path.exists("ml/artifacts/forecast_model.keras"):
             MODELS["forecast"] = tf.keras.models.load_model("ml/artifacts/forecast_model.keras")
             MODELS["forecast_loaded"] = True
-        # Load scalers
         import joblib
         if os.path.exists("ml/artifacts/scaler_x.pkl"):
             MODELS["scaler_x"] = joblib.load("ml/artifacts/scaler_x.pkl")
         if os.path.exists("ml/artifacts/scaler_y.pkl"):
             MODELS["scaler_y"] = joblib.load("ml/artifacts/scaler_y.pkl")
+        _model_loaded = True
     except Exception as e:
         MODELS["load_error"] = str(e)
         MODELS["stage_loaded"] = False
         MODELS["forecast_loaded"] = False
 
-load_models()
-
-# Routers
+# Tidak lagi memuat saat import — lazy load saat endpoint dipanggil
 from app.routers import dashboard, prediction, history, ai, health
 app.include_router(health.router, prefix="/api/v1")
 app.include_router(dashboard.router, prefix="/api/v1")
