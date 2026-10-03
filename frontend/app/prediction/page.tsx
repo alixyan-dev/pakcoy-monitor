@@ -1,4 +1,5 @@
 import Link from "next/link";
+import ForecastChart from "@/components/ui/forecast-chart";
 
 export default function PredictionPage() {
   return (

@@ -2,7 +2,6 @@ from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
 from app.db.database import get_db
 from app.services.query import latest_reading, last_n_days
-from app.services.predict import predict_forecast
 
 router = APIRouter()
 
@@ -10,6 +9,7 @@ router = APIRouter()
 def dashboard(db: Session = Depends(get_db)):
     latest = latest_reading(db)
     trend = last_n_days(db, 30)
+    from app.services.predict import predict_forecast
     forecast_result = predict_forecast(image_path=None)
     return {
         "latest": {
