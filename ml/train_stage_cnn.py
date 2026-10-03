@@ -30,7 +30,7 @@ X_val, X_test, y_val, y_test = train_test_split(X_temp, y_temp, test_size=0.50, 
 # Augmentasi training (tidak digunakan pada val/test — kita augmented via layer di model)
 # Untuk v1: gunakan layer augmentation di model (foto sudah cukup banyak untuk 137 gambar)
 base = keras.applications.MobileNetV2(weights="imagenet", include_top=False, input_shape=(224,224,3))
-base.trainable = False  # freeze dulu
+base.trainable = True  # fine-tuning unfreeze
 
 inputs = keras.Input(shape=(224,224,3))
 x = make_augmentation()(inputs)  # opsional — bisa dihapus jika terlalu agresif
@@ -43,7 +43,7 @@ outputs = keras.layers.Dense(len(label_names), activation="softmax", name="predi
 
 model = keras.Model(inputs, outputs)
 model.compile(
-    optimizer=keras.optimizers.Adam(learning_rate=1e-4),
+    optimizer=keras.optimizers.Adam(learning_rate=5e-5)  # fine-tune lr kecil,
     loss="sparse_categorical_crossentropy",
     metrics=["accuracy"]
 )
@@ -60,7 +60,7 @@ print("Train sample:", len(X_train), "| Val:", len(X_val), "| Test:", len(X_test
 print("Class names:", label_names)
 
 model.fit(X_train, y_train, validation_data=(X_val, y_val),
-          epochs=100, batch_size=8, class_weight=class_weight_dict,
+          epochs=50, batch_size=16  # fine-tune lebih cepat, class_weight=class_weight_dict,
           callbacks=callbacks, verbose=2)
 
 # Evaluasi test
