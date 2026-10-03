@@ -2,11 +2,11 @@ import Link from "next/link";
 
 export default function PredictionPage() {
   return (
-    <main className="min-h-screen bg-stone-50 text-stone-900 font-sans selection:bg-emerald-200">
-      <header className="sticky top-0 z-50 bg-stone-50/80 backdrop-blur-md border-b border-stone-200/60">
+    <main className="min-h-screen bg-[#09090b] text-zinc-50 font-sans selection:bg-emerald-200">
+      <header className="sticky top-0 z-50 bg-[#09090b]/80 backdrop-blur-md border-b border-stone-200/60">
         <div className="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
           <h1 className="text-lg font-semibold tracking-tight">Prediksi</h1>
-          <nav className="flex gap-6 text-sm font-medium text-stone-500"><Link href="/" className="hover:text-stone-900">Dashboard</Link><Link href="/prediction" className="text-stone-900">Prediksi</Link><Link href="/history" className="hover:text-stone-900">Sejarah</Link></nav>
+          
         </div>
       </header>
       <section className="max-w-5xl mx-auto px-6 pt-12">
@@ -21,16 +21,16 @@ export default function PredictionPage() {
               </div>
             ))}
           </div>
-          <div className="mt-6 grid grid-cols-4 gap-4 text-sm text-stone-500">
+          <div className="mt-6 grid grid-cols-4 gap-4 text-sm text-zinc-400">
             {[
               {label:"Kelembaban", val:"65%"},
               {label:"Suhu", val:"28°C"},
               {label:"Mansur", val:"100%"},
               {label:"Stage", val:"Harvest Ready"},
             ].map(c => (
-              <div key={c.label} className="p-3 rounded-xl bg-stone-50 border border-stone-100">
+              <div key={c.label} className="p-3 rounded-xl bg-[#09090b] border border-stone-100">
                 <div className="text-xs text-stone-400">{c.label}</div>
-                <div className="font-medium text-stone-900">{c.val}</div>
+                <div className="font-medium text-zinc-50">{c.val}</div>
               </div>
             ))}
           </div>

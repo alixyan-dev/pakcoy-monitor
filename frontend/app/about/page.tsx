@@ -1,11 +1,11 @@
 import Link from "next/link";
 export default function AboutPage() {
   return (
-    <main className="min-h-screen bg-stone-50 text-stone-900 font-sans selection:bg-emerald-200">
-      <header className="sticky top-0 z-50 bg-stone-50/80 backdrop-blur-md border-b border-stone-200/60">
+    <main className="min-h-screen bg-[#09090b] text-zinc-50 font-sans selection:bg-emerald-200">
+      <header className="sticky top-0 z-50 bg-[#09090b]/80 backdrop-blur-md border-b border-stone-200/60">
         <div className="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
           <h1 className="text-lg font-semibold tracking-tight">Tentang</h1>
-          <nav className="flex gap-6 text-sm font-medium text-stone-500"><Link href="/" className="hover:text-stone-900">Dashboard</Link><Link href="/about" className="text-stone-900">Tentang</Link></nav>
+          
         </div>
       </header>
       <section className="max-w-3xl mx-auto px-6 pt-12 text-sm leading-7 text-stone-600">

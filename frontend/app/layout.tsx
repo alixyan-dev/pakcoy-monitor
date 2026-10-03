@@ -9,7 +9,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <title>Pakcoy Monitor</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
-      <body className="bg-[#09090b] text-zinc-50 font-sans antialiased selection:bg-orange-500/30 selection:text-orange-100">
+      <body className="bg-[#09090b] text-zinc-50 font-sans antialiased selection:bg-orange-500/30">
         <SidebarNav />
         <main className="ml-16 lg:ml-64 transition-all duration-300 min-h-screen">
           {children}
