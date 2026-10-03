@@ -17,7 +17,7 @@ dengan task-nya.
 - [x] T0.5 Finalisasi `.opencode/instruction.md`, `docs/requirements.md`,
   `docs/design.md`, `docs/tasks.md`
   ✔ criteria: 4 file ada dan konsisten dengan `PLAN.md`
-- [ ] T0.6 `README.md` final (cara cepat menjalankan proyek)
+- [x] T0.6 `README.md` final (cara cepat menjalankan proyek)
 
 ## Fase 1 — Data & DB
 - [ ] T1.1 DB layer: `backend/app/db/database.py` + `models.py`
