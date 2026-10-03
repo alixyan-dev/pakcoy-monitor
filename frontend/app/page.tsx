@@ -4,6 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Activity, Clock, Menu, Leaf } from "lucide-react";
 import Link from "next/link";
+import TrendChart from "@/components/ui/trend-chart";
 
 export default function DashboardPage() {
   const [open, setOpen] = useState(false);
@@ -12,7 +13,7 @@ export default function DashboardPage() {
       <header className="sticky top-0 z-50 bg-[#09090b]/80 backdrop-blur-xl border-b border-orange-500/10">
         <div className="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between gap-4">
           <div className="flex items-center gap-3">
-            <div className="w-8 h-8 rounded-full bg-gradient-to-br from-orange-500 to-amber-400 shadow-lg shadow-orange-500/20" />
+            <div className="w-9 h-9 rounded-full bg-gradient-to-br from-orange-500 to-amber-400 flex items-center justify-center shadow-lg shadow-orange-500/30"><Leaf size={18} className="text-black" /></div>
             <h1 className="text-lg font-semibold tracking-tight leading-none text-zinc-100">Pakcoy Monitor</h1>
           </div>
           <nav className="flex gap-6 text-sm font-medium text-zinc-400">
