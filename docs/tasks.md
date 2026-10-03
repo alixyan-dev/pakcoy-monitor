@@ -10,7 +10,7 @@ dengan task-nya.
 - [x] T0.2 `backend/requirements.txt` (fastapi, uvicorn, sqlalchemy, pandas,
   openpyxl, tensorflow/keras, httpx, pydantic-settings)
   ✔ criteria: `pip install -r backend/requirements.txt` berhasil di Python 3.10+
-- [ ] T0.3 Scaffold frontend Next.js (TypeScript, Tailwind, App Router,
+- [x] T0.3 Scaffold frontend Next.js (TypeScript, Tailwind, App Router,
   +recharts, +swr)
   ✔ criteria: `npm run dev` berjalan di :3000
 - [ ] T0.4 `.env.example` backend + frontend
