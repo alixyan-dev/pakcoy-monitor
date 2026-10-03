@@ -13,7 +13,7 @@ dengan task-nya.
 - [x] T0.3 Scaffold frontend Next.js (TypeScript, Tailwind, App Router,
   +recharts, +swr)
   ✔ criteria: `npm run dev` berjalan di :3000
-- [ ] T0.4 `.env.example` backend + frontend
+- [x] T0.4 `.env.example` backend + frontend
 - [ ] T0.5 Finalisasi `.opencode/instruction.md`, `docs/requirements.md`,
   `docs/design.md`, `docs/tasks.md`
   ✔ criteria: 4 file ada dan konsisten dengan `PLAN.md`
