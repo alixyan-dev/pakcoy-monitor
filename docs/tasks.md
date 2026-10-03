@@ -14,7 +14,7 @@ dengan task-nya.
   +recharts, +swr)
   ✔ criteria: `npm run dev` berjalan di :3000
 - [x] T0.4 `.env.example` backend + frontend
-- [ ] T0.5 Finalisasi `.opencode/instruction.md`, `docs/requirements.md`,
+- [x] T0.5 Finalisasi `.opencode/instruction.md`, `docs/requirements.md`,
   `docs/design.md`, `docs/tasks.md`
   ✔ criteria: 4 file ada dan konsisten dengan `PLAN.md`
 - [ ] T0.6 `README.md` final (cara cepat menjalankan proyek)
