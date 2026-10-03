@@ -36,8 +36,8 @@ export default function PredictionPage() {
             ))}
           </div>
         </div>
-        <div className="rounded-2xl bg-amber-50 border border-amber-100 p-5 text-sm text-stone-700 leading-relaxed">
-          <strong className="text-amber-700">Catatan:</strong> Prediksi berbasis tren historis 14 hari dan citra terkini. Kondisi cuaca eksternal tidak dimasukkan. Untuk akurasi lebih baik, pastikan foto tanaman diambil pada kondisi pencahayaan merata.
+        <div className="rounded-2xl bg-zinc-900 border border-zinc-800 p-5 text-sm text-stone-700 leading-relaxed">
+          <strong className="text-orange-400">Catatan:</strong> Prediksi berbasis tren historis 14 hari dan citra terkini. Kondisi cuaca eksternal tidak dimasukkan. Untuk akurasi lebih baik, pastikan foto tanaman diambil pada kondisi pencahayaan merata.
         </div>
       </section>
     </main>
