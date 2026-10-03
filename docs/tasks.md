@@ -7,7 +7,7 @@ dengan task-nya.
 - [x] T0.1 `git init` + `.gitignore` (`.env`, `*.db`, `__pycache__/`,
   `node_modules/`, `.next/`, `*.log`)
   ✔ criteria: `git status` bersih, tidak ada file rahasia yang ter-track
-- [ ] T0.2 `backend/requirements.txt` (fastapi, uvicorn, sqlalchemy, pandas,
+- [x] T0.2 `backend/requirements.txt` (fastapi, uvicorn, sqlalchemy, pandas,
   openpyxl, tensorflow/keras, httpx, pydantic-settings)
   ✔ criteria: `pip install -r backend/requirements.txt` berhasil di Python 3.10+
 - [ ] T0.3 Scaffold frontend Next.js (TypeScript, Tailwind, App Router,
